@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visiualizator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .main-container {
+            display: block;
+            margin: auto auto;
+            position: relative;
+            margin: 0 22rem;
+            margin-top: 4rem;
+            /* background-color:lightgreen; */
+        }
+
+        .card {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: all 1s ease;
+            /* background-color:skyblue; */
+        }
+
+        .hovercard:hover {
+            transform: rotateY(180deg);
+            transition: all 1s ease;
+        }
+
+        .front-face {
+            position: absolute;
+            /* background-color: blue; */
+            backface-visibility: hidden;
+            /* z-index:2; */
+        }
+
+        .back-face {
+            position: absolute;
+            height: 550px;
+            width: 800px;
+            text-align:center;
+            backface-visibility: hidden;
+            border-radius: 5px;
+            background-image: linear-gradient(90deg, #2e8bc0, #189ab4, #75e6da);
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+            transform: rotateY(180deg);
+            overflow: scroll;
+            /* z-index:1; */
+        }
+        img{
+            display: block;
+            margin:auto auto;
+            height:1000px;
+            width:600px;
+        }
+        ::-webkit-scrollbar{
+            width:7px;
+        }
+        ::-webkit-scrollbar-track{
+            background-color:rgba(255, 255, 255, 0.4);
+        }
+        ::-webkit-scrollbar-thumb{
+            background-image: linear-gradient(90deg, #189ab4, #75e6da);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<header>
+    <nav>
+        <button class="main-btn btn-margins btn-styling text-styling">New Array</button>
+        <div class="Dropdown">
+            <button type="button" class="drop-btn hover-me btn-margins btn-styling text-styling">Select
+                Algorithm</button>
+            <div class="Dropdown-menu">
+                <button type="button" class="bs btn-margins btn-styling text-styling btn-length special-hover">Bubble
+                    Sort</button>
+                <button type="button" class="is btn-margins btn-styling text-styling btn-length special-hover">Insertion
+                    Sort</button>
+                <button type="button" class="ss btn-margins btn-styling text-styling btn-length special-hover">Selection
+                    Sort</button>
+                <button type="button" class="ms btn-margins btn-styling text-styling btn-length special-hover">Marge
+                    Sort</button>
+                <button type="button" class="qs btn-margins btn-styling text-styling btn-length special-hover">Quick
+                    Sort</button>
+                <button type="button" class="bes btn-margins btn-styling text-styling btn-length special-hover">Binary
+                    Search</button>
+            </div>
+        </div>
+        <label for="" class="text-styling btn-margins">Size</label>
+        <input type="range" min="5" max="120" step=1 value=60 class="input-size">
+        <label for="" class="text-styling btn-margins">Speed</label>
+        <input type="range" min="10" max="100" stepDown=10 value=60 class="input-speed">
+    </nav>
+</header>
+
+<body>
+    <div class="main-container">
+        <div class="card">
+            <div class="bg-div front-face"></div>
+            <div class="back-face">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="info-box">
+        <p class="text-styling info-heading" style="font-size:1rem;margin-top:1rem;"><p>
+        <button type="button" class="ck btn-margins btn-styling text-styling special-hover">Check Source</button>
+    </div>
+</body>
+<footer>
+    <script src="app.js"></script>
+    <script src="sortingAlgo/bubbleSort.js"></script>
+    <script src="sortingAlgo/insertionSort.js"></script>
+    <script src="sortingAlgo/selectionSort.js"></script>
+    <script src="sortingAlgo/margeSort.js"></script>
+    <script src="sortingAlgo/quickSort.js"></script>
+    <script src="sortingAlgo/binarySearch.js"></script>
+</footer>
+
+</html>
